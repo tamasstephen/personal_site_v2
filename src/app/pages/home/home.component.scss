@@ -1,0 +1,39 @@
+@import "../../../design-tokens";
+
+:host {
+  .home-container {
+    display: grid;
+    grid-template-columns: 40% 55%;
+    gap: $spacing-large;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+    .home-intro {
+      position: relative;
+
+      .home-intro-content {
+        contain: layout style paint;
+        position: fixed;
+        top: 30%;
+        max-width: 300px;
+      }
+
+      h1 {
+        margin: 0;
+      }
+
+      .subtitle {
+        font-size: map-get($text-font-size, large);
+        margin: $spacing-medium 0;
+      }
+
+      .description {
+        font-size: map-get($text-font-size, normal);
+        margin: $spacing-medium 0;
+        max-width: 400px;
+        color: $color-on-primary-muted;
+      }
+    }
+  }
+}

@@ -1,0 +1,61 @@
+@import "../../../../../design-tokens.scss";
+
+.experience-container {
+  display: flex;
+  flex-direction: row;
+  gap: $spacing-medium;
+  padding: $spacing-medium 0;
+
+  .experience-year {
+    min-width: 100px;
+    display: flex;
+    gap: $spacing-small;
+    flex-direction: row;
+    color: $color-on-primary-muted;
+    font-size: map-get($text-font-size, small);
+    margin-top: $spacing-extra-small;
+    justify-self: flex-end;
+  }
+
+  .experience-content {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-small;
+
+    h3 {
+      margin: 0;
+      font-size: map-get($responsive-heading-font-size, h3);
+      color: $color-on-background;
+      letter-spacing: $title-letter-spacing;
+    }
+
+    p {
+      margin: 0;
+
+      &:first-of-type {
+        color: $color-on-primary;
+        font-weight: $font-weight-middle;
+      }
+
+      &:last-of-type {
+        color: $color-on-primary-muted;
+        line-height: map-get($line-height, normal);
+      }
+    }
+
+    ::ng-deep mat-chip {
+      background-color: rgba(255, 255, 255, 0.09);
+      border: none;
+
+      span.mdc-evolution-chip__text-label.mat-mdc-chip-action-label {
+        font-size: map-get($text-font-size, x-small);
+        color: $color-on-primary;
+        font-weight: $font-weight-normal;
+      }
+
+      span.mdc-evolution-chip__action.mdc-evolution-chip__action--primary::before {
+        border-style: none;
+      }
+    }
+  }
+}

@@ -1,1 +1,65 @@
-/* You can add global styles to this file, and also import other style files */
+// Import design tokens
+@import "design-tokens";
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: $color-background;
+  color: $color-on-background;
+  box-sizing: border-box;
+}
+
+main {
+  max-width: map-get($max-width, xxl);
+  margin: 0 auto;
+  padding: map-get($section-padding, y-desktop)
+    map-get($section-padding, x-desktop);
+}
+
+h1 {
+  font-size: map-get($responsive-heading-font-size, h1);
+  font-weight: $font-weight-middle;
+  letter-spacing: $title-letter-spacing;
+  line-height: map-get($line-height, small);
+}
+
+h2 {
+  font-size: map-get($responsive-heading-font-size, h2);
+  font-weight: $font-weight-middle;
+  line-height: map-get($line-height, small);
+}
+
+h3 {
+  font-size: map-get($responsive-heading-font-size, h3);
+  font-weight: $font-weight-middle;
+  line-height: map-get($line-height, small);
+}
+
+p {
+  font-size: $paragraph-font-size;
+  font-weight: $font-weight-normal;
+  line-height: map-get($line-height, normal);
+}
+
+.button {
+  padding: $spacing-small $spacing-medium;
+  box-shadow: $shadow-2;
+  background-color: $color-primary;
+  color: $color-on-primary;
+}
+
+@media (max-width: map-get($max-width, md)) {
+  main {
+    padding: map-get($section-padding, y-tablet)
+      map-get($section-padding, x-tablet);
+  }
+}
+
+@media (max-width: map-get($max-width, sm)) {
+  main {
+    padding: map-get($section-padding, y-mobile)
+      map-get($section-padding, x-mobile);
+  }
+}

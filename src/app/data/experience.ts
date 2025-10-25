@@ -1,0 +1,80 @@
+import { Experience } from '../types/experience.type';
+
+export const experienceData: Experience[] = [
+  {
+    from: 2024,
+    to: null,
+    company: 'Sonrisa Technologies',
+    position: 'Frontend Engineer',
+    description:
+      'Currently working as a Frontend Engineer at Sonrisa technologies. Developing frontend and shipping production code for client mobile applications and webapplications.',
+    technologies: [
+      'Angular',
+      'React',
+      'React Native',
+      'TypeScript',
+      'JavaScript',
+      'HTML',
+      'CSS',
+      'SCSS',
+      'Jest',
+      'React Testing Library',
+      'Angular Material',
+      'Git',
+      'GitHub',
+    ],
+  },
+  {
+    from: 2023,
+    to: 2024,
+    company: 'Company name under NDA',
+    position: 'Frontend Engineer',
+    description:
+      'Developed shipped and styled web applications for multiple clients, integrated authentication and authorization services.',
+    technologies: [
+      'React',
+      'TypeScript',
+      'JavaScript',
+      'HTML',
+      'CSS',
+      'SCSS',
+      'Okta',
+      'Jest',
+      'Git',
+      'GitLab',
+      'Docker',
+      'Bitbucket',
+      'React Testing Library',
+      'Styled Components',
+    ],
+  },
+  {
+    from: 2022,
+    to: 2023,
+    company: 'Corestad Gmbh',
+    position: 'Fullstack Engineer',
+    description:
+      'Built and shipped e-commerce solutions for clients, using React, VueJs, Workdpress and Shopify.',
+    technologies: [
+      'VueJs',
+      'React',
+      'TypeScript',
+      'JavaScript',
+      'HTML',
+      'CSS',
+      'SCSS',
+      'Wordpress',
+      'Shopify',
+      'Liquid',
+    ],
+  },
+  {
+    from: 2019,
+    to: 2021,
+    company: 'Dot Creative',
+    position: 'UX Designer',
+    description:
+      'Created competitor analysis, wireframes and prototypes for web and mobile applications.',
+    technologies: ['Figma'],
+  },
+];

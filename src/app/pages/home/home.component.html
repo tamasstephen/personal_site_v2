@@ -1,0 +1,18 @@
+<section class="home-container">
+  <div class="home-intro">
+    <div class="home-intro-content">
+      <h1>Tamás Stephen</h1>
+      <p class="subtitle">Frontend Engineer</p>
+      <p class="description">
+        A dedicated Frontend Engineer who structures web applications with the
+        care and consideration found in a well-written novel or a meticulously
+        crafted album
+      </p>
+    </div>
+  </div>
+  <div class="home-scroll">
+    @for (experience of experienceData(); track experience.company) {
+    <app-experience [experienceData]="experience"></app-experience>
+    }
+  </div>
+</section>

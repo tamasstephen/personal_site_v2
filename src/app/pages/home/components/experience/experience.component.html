@@ -1,0 +1,16 @@
+<article class="experience-container">
+  <div class="experience-year">
+    <span>{{ experienceData().from }}</span> -
+    <span>{{ experienceData().to ?? "Present" }}</span>
+  </div>
+  <div class="experience-content">
+    <h3>{{ experienceData().company }}</h3>
+    <p>{{ experienceData().position }}</p>
+    <p>{{ experienceData().description }}</p>
+    <mat-chip-set>
+      @for (technology of experienceData().technologies; track technology) {
+      <mat-chip>{{ technology }}</mat-chip>
+      }
+    </mat-chip-set>
+  </div>
+</article>
