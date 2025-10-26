@@ -13,9 +13,10 @@
       position: relative;
 
       .home-intro-content {
+        animation: fadeIn 0.5s ease-in-out;
         contain: layout style paint;
         position: fixed;
-        top: 30%;
+        top: 10%;
         max-width: 300px;
       }
 
@@ -35,5 +36,20 @@
         color: $color-on-primary-muted;
       }
     }
+
+    .home-scroll {
+      animation: fadeIn 0.5s ease-in-out;
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

@@ -24,7 +24,7 @@
 
     h3 {
       margin: 0;
-      font-size: map-get($responsive-heading-font-size, h3);
+      font-size: map-get($responsive-heading-font-size, lg);
       color: $color-on-background;
       letter-spacing: $title-letter-spacing;
     }
@@ -34,7 +34,7 @@
 
       &:first-of-type {
         color: $color-on-primary;
-        font-weight: $font-weight-middle;
+        font-weight: $font-weight-normal;
       }
 
       &:last-of-type {
@@ -49,7 +49,7 @@
 
       span.mdc-evolution-chip__text-label.mat-mdc-chip-action-label {
         font-size: map-get($text-font-size, x-small);
-        color: $color-on-primary;
+        color: $color-secondary;
         font-weight: $font-weight-normal;
       }
 
