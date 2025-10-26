@@ -11,13 +11,57 @@
 
     .home-intro {
       position: relative;
+      height: 100%;
 
       .home-intro-content {
         animation: fadeIn 0.5s ease-in-out;
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         contain: layout style paint;
         position: fixed;
         top: 10%;
         max-width: 300px;
+
+        .home-intro-content-footer {
+          p,
+          a {
+            margin: 0;
+            text-decoration: none;
+            font-size: map-get($text-font-size, small);
+          }
+
+          .home-intro-content-footer-contact {
+            display: inline-block;
+
+            a {
+              color: $color-on-primary;
+              display: inline-block;
+              position: relative;
+            }
+
+            a:after {
+              content: "";
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              height: 2px;
+              background-color: $color-primary;
+              width: 0;
+              z-index: -1;
+              transition: width 0.3s ease-in-out;
+            }
+
+            a:hover:after {
+              width: 100%;
+            }
+          }
+
+          p {
+            color: $color-on-primary-muted;
+          }
+        }
       }
 
       h1 {
@@ -62,17 +106,26 @@
 
       .home-intro {
         .home-intro-content {
+          height: 100%;
           position: static;
           max-width: 100%;
           margin-bottom: $spacing-large;
+
+          .home-intro-content-footer {
+            display: none;
+          }
         }
       }
 
       .home-scroll {
-        .experience-title {
-          display: block;
-          font-size: map-get($responsive-heading-font-size, h3);
-          margin: 0;
+        .home-experience {
+          position: static;
+
+          .experience-title {
+            display: block;
+            font-size: map-get($responsive-heading-font-size, h3);
+            margin: 0;
+          }
         }
       }
     }
@@ -85,11 +138,26 @@
 
       .home-intro {
         .home-intro-content {
+          position: static;
           margin-bottom: $spacing-medium;
         }
 
         .description {
           max-width: 100%;
+        }
+      }
+
+      .home-scroll {
+        .home-experience {
+          position: relative;
+
+          .experience-title {
+            z-index: 2;
+            position: sticky;
+            background-color: $color-background;
+            padding: $spacing-medium 0;
+            top: 0;
+          }
         }
       }
     }

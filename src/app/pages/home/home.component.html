@@ -1,18 +1,28 @@
 <section class="home-container">
   <div class="home-intro">
     <div class="home-intro-content">
-      <h1>Tamás Stephen</h1>
-      <p class="subtitle">Frontend Engineer</p>
-      <p class="description">
-        A dedicated Frontend Engineer who structures web applications with the
-        care and consideration found in a well-written novel or a meticulously
-        crafted album.
-      </p>
+      <div class="home-intro-content-header">
+        <h1>Tamás Stephen</h1>
+        <p class="subtitle">Frontend Engineer</p>
+        <p class="description">
+          A dedicated Frontend Engineer who structures web applications with the
+          care and consideration found in a well-written novel or a meticulously
+          crafted album.
+        </p>
+      </div>
+      <div class="home-intro-content-footer">
+        <p>Hungary, Budapest</p>
+        <p class="home-intro-content-footer-contact">
+          <a href="mailto:stephen.tamas@gmail.com"
+            >tamas.stephen&#64;proton.me</a
+          >
+        </p>
+      </div>
     </div>
   </div>
   <div class="home-scroll">
     <section class="home-experience">
-      <h2 class="experience-title">Experience</h2>
+      <h2 class="experience-title section-title">Experience</h2>
       @for (experience of experienceData(); track experience.company) {
       <app-experience [experienceData]="experience"></app-experience>
       }
