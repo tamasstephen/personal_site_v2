@@ -10,7 +10,7 @@
     <p>{{ experienceData().description }}</p>
     <mat-chip-set>
       @for (technology of experienceData().technologies; track technology) {
-      <mat-chip>{{ technology }}</mat-chip>
+      <app-chip [text]="technology" />
       }
     </mat-chip-set>
   </div>

@@ -1,0 +1,19 @@
+@import "../../../design-tokens.scss";
+
+:host {
+  mat-chip {
+    background-color: rgba(255, 255, 255, 0.09);
+    border: none;
+
+    ::ng-deep span.mdc-evolution-chip__text-label.mat-mdc-chip-action-label {
+      font-size: map-get($text-font-size, x-small);
+      color: $color-secondary;
+      font-weight: $font-weight-normal;
+    }
+
+    ::ng-deep
+      span.mdc-evolution-chip__action.mdc-evolution-chip__action--primary::before {
+      border-style: none;
+    }
+  }
+}

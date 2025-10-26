@@ -27,5 +27,17 @@
       <app-experience [experienceData]="experience"></app-experience>
       }
     </section>
+    <section class="home-projects">
+      <h2 class="projects-title section-title">Projects</h2>
+      @for (project of projectsData(); track project.name) {
+      <app-project
+        [title]="project.name"
+        [image]="project.image"
+        [description]="project.description"
+        [url]="project.url"
+        [technologies]="project.technologies"
+      ></app-project>
+      }
+    </section>
   </div>
 </section>

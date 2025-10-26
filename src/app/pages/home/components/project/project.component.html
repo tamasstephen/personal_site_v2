@@ -1,0 +1,12 @@
+<a href="{{ url() }}" target="_blank">
+  <article class="project-container">
+    <h3>{{ title() }}</h3>
+    <p>{{ description() }}</p>
+    <mat-chip-set>
+      @for (technology of technologies(); track technology) {
+      <app-chip [text]="technology" />
+      }
+    </mat-chip-set>
+    <img [src]="image()" alt="{{ title() }}" />
+  </article>
+</a>

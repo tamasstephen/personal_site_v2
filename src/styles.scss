@@ -50,6 +50,38 @@ p {
   color: $color-on-primary;
 }
 
+@keyframes animate-in {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  20% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes animate-out {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+}
+
+article {
+  animation: linear animate-in;
+  animation-timeline: view();
+}
+
+article:out-of-view {
+  animation: linear animate-out;
+  animation-timeline: view();
+}
+
 @media (max-width: map-get($max-width, md)) {
   main {
     padding: map-get($section-padding, y-tablet)
@@ -59,7 +91,7 @@ p {
 
 @media (max-width: map-get($max-width, sm)) {
   main {
-    padding: map-get($section-padding, y-mobile)
+    padding: map-get($section-padding, y-desktop)
       map-get($section-padding, x-mobile);
   }
 }

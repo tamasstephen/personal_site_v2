@@ -83,15 +83,21 @@
 
     .home-scroll {
       animation: fadeIn 0.5s ease-in-out;
+      padding-bottom: 4rem;
 
-      .experience-title {
+      .section-title {
         display: none;
       }
 
-      .home-experience {
+      .home-experience,
+      .home-projects {
         display: flex;
         flex-direction: column;
         gap: $spacing-medium;
+      }
+
+      section + section {
+        margin-top: $spacing-extra-large;
       }
     }
   }
@@ -118,10 +124,10 @@
       }
 
       .home-scroll {
-        .home-experience {
+        section {
           position: static;
 
-          .experience-title {
+          .section-title {
             display: block;
             font-size: map-get($responsive-heading-font-size, h3);
             margin: 0;
@@ -148,10 +154,11 @@
       }
 
       .home-scroll {
-        .home-experience {
+        section {
           position: relative;
 
-          .experience-title {
+          .experience-title,
+          .projects-title {
             z-index: 2;
             position: sticky;
             background-color: $color-background;

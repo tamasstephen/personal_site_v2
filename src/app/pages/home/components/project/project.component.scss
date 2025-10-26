@@ -1,0 +1,33 @@
+@import "../../../../../design-tokens.scss";
+
+:host {
+  a {
+    text-decoration: none;
+    color: $color-on-background;
+  }
+
+  img {
+    border-radius: $spacing-small;
+    aspect-ratio: 21/9;
+    object-fit: cover;
+    object-position: top;
+    max-width: 100%;
+  }
+
+  article {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-small;
+
+    h3 {
+      font-size: map-get($responsive-heading-font-size, lg);
+      margin: 0;
+    }
+
+    p {
+      color: $color-on-primary-muted;
+      font-weight: $font-weight-normal;
+      margin: 0;
+    }
+  }
+}
