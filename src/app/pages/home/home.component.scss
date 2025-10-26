@@ -90,14 +90,23 @@
       }
 
       .home-experience,
-      .home-projects {
+      .home-projects,
+      .home-listening {
         display: flex;
         flex-direction: column;
         gap: $spacing-medium;
       }
 
       section + section {
-        margin-top: $spacing-extra-large;
+        margin-top: 8rem;
+      }
+
+      .personal-title {
+        font-size: map-get($text-font-size, x-small);
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        padding: $spacing-medium 0;
+        margin-bottom: 0;
       }
     }
   }
@@ -124,6 +133,10 @@
       }
 
       .home-scroll {
+        section + section {
+          margin-top: $spacing-extra-large;
+        }
+
         section {
           position: static;
 
