@@ -11,8 +11,11 @@
     </div>
   </div>
   <div class="home-scroll">
-    @for (experience of experienceData(); track experience.company) {
-    <app-experience [experienceData]="experience"></app-experience>
-    }
+    <section class="home-experience">
+      <h2 class="experience-title">Experience</h2>
+      @for (experience of experienceData(); track experience.company) {
+      <app-experience [experienceData]="experience"></app-experience>
+      }
+    </section>
   </div>
 </section>

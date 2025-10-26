@@ -39,6 +39,59 @@
 
     .home-scroll {
       animation: fadeIn 0.5s ease-in-out;
+
+      .experience-title {
+        display: none;
+      }
+
+      .home-experience {
+        display: flex;
+        flex-direction: column;
+        gap: $spacing-medium;
+      }
+    }
+  }
+
+  // Tablet and below
+  @media (max-width: map-get($max-width, md)) {
+    .home-container {
+      grid-template-columns: 1fr;
+      height: auto;
+      align-items: start;
+      gap: $spacing-extra-large;
+
+      .home-intro {
+        .home-intro-content {
+          position: static;
+          max-width: 100%;
+          margin-bottom: $spacing-large;
+        }
+      }
+
+      .home-scroll {
+        .experience-title {
+          display: block;
+          font-size: map-get($responsive-heading-font-size, h3);
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  // Mobile
+  @media (max-width: map-get($max-width, sm)) {
+    .home-container {
+      gap: $spacing-large;
+
+      .home-intro {
+        .home-intro-content {
+          margin-bottom: $spacing-medium;
+        }
+
+        .description {
+          max-width: 100%;
+        }
+      }
     }
   }
 }

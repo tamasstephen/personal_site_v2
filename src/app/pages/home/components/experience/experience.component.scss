@@ -59,3 +59,16 @@
     }
   }
 }
+
+// Mobile layout
+@media (max-width: map-get($max-width, sm)) {
+  .experience-container {
+    flex-direction: column;
+    gap: $spacing-small;
+
+    .experience-year {
+      min-width: auto;
+      margin-top: 0;
+    }
+  }
+}
