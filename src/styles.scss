@@ -51,35 +51,37 @@ p {
 }
 
 @keyframes animate-in {
-  0% {
+  from {
     opacity: 0;
-    transform: translateY(100%);
+    transform: translateY(50px);
   }
-  20% {
+  to {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
 @keyframes animate-out {
-  0% {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
     opacity: 1;
     transform: translateY(0);
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(-100%);
   }
 }
 
 article {
-  animation: linear animate-in;
-  animation-timeline: view();
+  opacity: 0;
 }
 
-article:out-of-view {
-  animation: linear animate-out;
-  animation-timeline: view();
+article.animate-in {
+  animation: animate-in 0.6s ease forwards;
+}
+
+article.animate-out {
+  animation: animate-out 0.6s ease forwards;
 }
 
 @media (max-width: map-get($max-width, md)) {
