@@ -1,11 +1,17 @@
 // Import design tokens
 @import "design-tokens";
 
+@font-face {
+  font-family: "Roboto";
+  src: url("assets/Roboto.ttf") format("truetype");
+  font-display: swap;
+}
+
 html,
 body {
+  font-family: "Roboto", "Helvetica Neue", sans-serif;
   height: 100%;
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
   background-color: $color-background;
   background: radial-gradient(circle at center, #002244, #07121d);
   color: $color-on-background;
