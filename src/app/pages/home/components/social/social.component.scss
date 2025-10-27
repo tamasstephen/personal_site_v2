@@ -1,0 +1,46 @@
+@import "../../../../../design-tokens.scss";
+
+:host {
+  display: flex;
+  gap: $spacing-medium;
+  border-radius: $spacing-small;
+  justify-content: center;
+  align-items: center;
+
+  a {
+    text-decoration: none;
+    color: $color-on-background;
+
+    p {
+      font-size: map-get($text-font-size, large);
+      font-weight: $font-weight-middle;
+      margin: 0;
+      position: relative;
+      display: inline-block;
+    }
+
+    p:after {
+      content: "";
+      position: absolute;
+      bottom: 1px;
+      left: 4px;
+      width: 0;
+      height: 8px;
+      background-color: $color-primary;
+      z-index: -1;
+      transition: width 0.3s ease-in-out;
+    }
+
+    p:hover:after {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: map-get($max-width, md)) {
+    a {
+      p {
+        font-size: map-get($text-font-size, small);
+      }
+    }
+  }
+}

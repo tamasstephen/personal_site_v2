@@ -7,8 +7,10 @@ body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
   background-color: $color-background;
+  background: radial-gradient(circle at center, #002244, #07121d);
   color: $color-on-background;
   box-sizing: border-box;
+  animation-timeline: --scroll-timeline;
 }
 
 main {
@@ -73,15 +75,10 @@ p {
 }
 
 article {
-  opacity: 0;
-}
-
-article.animate-in {
-  animation: animate-in 0.6s ease forwards;
-}
-
-article.animate-out {
-  animation: animate-out 0.6s ease forwards;
+  animation-timeline: view();
+  animation-name: animate-in, animate-out;
+  animation-range: entry 0% cover 30%;
+  animation-duration: 1ms;
 }
 
 @media (max-width: map-get($max-width, md)) {

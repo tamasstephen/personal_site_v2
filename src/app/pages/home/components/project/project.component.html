@@ -1,7 +1,11 @@
-<a href="{{ url() }}" target="_blank">
+<a href="{{ url() }}" target="_blank" noopener noreferrer>
   <article class="project-container">
-    <h3>{{ title() }}</h3>
-    <p>{{ description() }}</p>
+    <div>
+      <h3>{{ title() }}</h3>
+    </div>
+    <div>
+      <p>{{ description() }}</p>
+    </div>
     <mat-chip-set>
       @for (technology of technologies(); track technology) {
       <app-chip [text]="technology" />
