@@ -7,7 +7,7 @@ export const experienceData: Experience[] = [
     company: 'Sonrisa Technologies',
     position: 'Frontend Engineer',
     description:
-      'Currently working as a Frontend Engineer at Sonrisa technologies. Developing frontend and shipping production code for client mobile applications and webapplications.',
+      'Currently working as a Frontend Engineer at Sonrisa Technologies. Developing frontend and shipping production code for client mobile applications and webapplications.',
     technologies: [
       'Angular',
       'React',
@@ -54,7 +54,7 @@ export const experienceData: Experience[] = [
     company: 'Corestad Gmbh',
     position: 'Fullstack Engineer',
     description:
-      'Built and shipped e-commerce solutions for clients, using React, VueJs, Workdpress and Shopify.',
+      'Built and shipped e-commerce solutions for clients, using React, VueJs, Wordpress and Shopify.',
     technologies: [
       'VueJs',
       'React',
