@@ -19,7 +19,7 @@ RUN npm run build
 FROM nginx:alpine
 
 # Copy the built application from builder stage
-COPY --from=builder /app/dist/personal-site_v2/browser /usr/share/nginx/html/personal-site_v2/browser
+COPY --from=builder /app/dist/personal-site_v2/browser /usr/share/nginx/html
 
 # Copy nginx configuration
 COPY .docker/nginx/default.conf /etc/nginx/conf.d/default.conf
