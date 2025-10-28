@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: .docker/Dockerfile
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.personal-site.rule=Host(`tamasstephen.com`)"
+      - "traefik.http.routers.personal-site.entrypoints=websecure"
+      - "traefik.http.routers.personal-site.tls=true"
+      - "traefik.http.services.personal-site.loadbalancer.server.port=80"
+    restart: unless-stopped
