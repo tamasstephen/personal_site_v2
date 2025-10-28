@@ -87,3 +87,34 @@ $section-padding: (
   x-tablet: 2rem,
   x-desktop: 2.5rem,
 );
+
+@mixin hover-underline {
+  a.hover-underline {
+    text-decoration: none;
+
+    p {
+      color: $color-on-background;
+      font-weight: $font-weight-middle;
+      font-size: map-get($text-font-size, normal);
+      display: inline-block;
+      position: relative;
+      z-index: 1;
+    }
+
+    p:after {
+      content: "";
+      position: absolute;
+      bottom: 1px;
+      left: 4px;
+      width: 0;
+      height: 8px;
+      background-color: $color-primary;
+      transition: width 0.3s ease-in-out;
+      z-index: -1;
+    }
+
+    p:hover:after {
+      width: 100%;
+    }
+  }
+}

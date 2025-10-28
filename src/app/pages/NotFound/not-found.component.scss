@@ -1,0 +1,31 @@
+@import "../../../design-tokens.scss";
+
+.not-found-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+
+  .not-found-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: $spacing-medium;
+    max-width: 400px;
+    padding: $spacing-medium;
+
+    h1,
+    p {
+      margin: 0;
+      text-align: center;
+    }
+
+    p {
+      color: $color-on-primary-muted;
+    }
+
+    @include hover-underline;
+  }
+}
